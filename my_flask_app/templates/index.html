@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ข้อมูลกระต่าย</title>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>แสดงรูปภาพใน Flask</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <h1>🐰 ข้อมูลของกระต่าย 🐰</h1> <br>
+
+    <br>
+    <h1><strong>ชื่อ:</strong> <h3>{{ rabbit.name }}</h3></h1>
+    <p><strong>สายพันธุ์:</strong> {{ rabbit.species }}</p>
+    <p><strong>อายุ:</strong> {{ rabbit.age }} ปี</p>
+    <p><strong>สี:</strong> {{ rabbit.color }}</p>
+    <p><strong>น้ำหนัก:</strong> {{ rabbit.weight }}</p>
+    <p><strong>คำอธิบาย:</strong> {{ rabbit.description }}</p>
+    <h1>นี่คือหน้าของฟูมิ</h1> <br>
+    
+    <a href="https://www.youtube.com/shorts/EY6kwJlHAfI" target="_blank"> 
+    <img src="{{ url_for('static', filename='images/ฟูมิอ้วน.jpg') }}" alt="กระต่าย" width="300">
+    </a>
+
+    <br>
+
+</body>
+</html>
+
+<style>
+    h3 {
+        font-size: 30px;
+        font-family: 'Charmonman', sans-serif;
+    }
+    h1, h3 {
+        display: inline;
+    }
+</style>
+<link href="https://fonts.googleapis.com/css2?family=Charmonman:wght@400;700&display=swap" rel="stylesheet">
+

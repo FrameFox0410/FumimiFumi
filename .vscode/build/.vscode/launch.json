@@ -1,0 +1,15 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "C/C++ Runner: Debug Session",
+      "type": "cppvsdbg",
+      "request": "launch",
+      "args": [],
+      "stopAtEntry": true,
+      "console": "externalTerminal",
+      "cwd": "c:/Users/ACER/Desktop/Frame_coding/.vscode/build",
+      "program": "c:/Users/ACER/Desktop/Frame_coding/.vscode/build/build/Debug/outDebug"
+    }
+  ]
+}
