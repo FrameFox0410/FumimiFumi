@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <title>รีเซ็ทตัวเองประจำวัน</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    body {
+      font-family: sans-serif;
+      padding: 20px;
+      background-color: #f3f4f6;
+      color: #111827;
+    }
+    h2 {
+      color: #1f2937;
+    }
+    .task {
+      margin: 10px 0;
+    }
+    button {
+      padding: 10px 20px;
+      margin-top: 20px;
+      font-size: 16px;
+      background-color: #3b82f6;
+      color: white;
+      border: none;
+      border-radius: 8px;
+    }
+    button:hover {
+      background-color: #2563eb;
+    }
+  </style>
+</head>
+<body>
+
+<h2>✅ รีเซ็ทตัวเองประจำวัน</h2>
+
+<div class="task"><input type="checkbox" id="task1"> หายใจลึก 3 ครั้ง</div>
+<div class="task"><input type="checkbox" id="task2"> จดเป้าหมายวันนี้</div>
+<div class="task"><input type="checkbox" id="task3"> เก็บเตียง / จัดโต๊ะ</div>
+<div class="task"><input type="checkbox" id="task4"> ออกกำลังกาย 5 นาที</div>
+<div class="task"><input type="checkbox" id="task5"> ดื่มน้ำ 1 แก้วใหญ่</div>
+<div class="task"><input type="checkbox" id="task6"> อ่าน / ฟังอะไรดี ๆ</div>
+<div class="task"><input type="checkbox" id="task7"> สรุปสิ่งที่ได้เรียนรู้วันนี้</div>
+
+<button onclick="resetChecklist()">รีเซ็ตทั้งหมด</button>
+
+<script>
+  const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
+
+  window.onload = () => {
+    checkboxes.forEach((cb, index) => {
+      const checked = localStorage.getItem('task' + index);
+      cb.checked = checked === 'true';
+      cb.addEventListener('change', () => {
+        localStorage.setItem('task' + index, cb.checked);
+      });
+    });
+  };
+
+  function resetChecklist() {
+    checkboxes.forEach((cb, index) => {
+      cb.checked = false;
+      localStorage.setItem('task' + index, false);
+    });
+  }
+</script>
+
+</body>
+</html>

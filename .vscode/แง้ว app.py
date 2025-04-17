@@ -2,7 +2,6 @@ from Flask import Flask, render_template_string
 
 app = Flask(__name__)
 
-# HTML และ CSS ที่เราจะใช้ในเว็บไซต์
 html_content = """
 <!DOCTYPE html>
 <html lang="th">
